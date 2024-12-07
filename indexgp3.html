@@ -64,28 +64,37 @@
 		
 	</head>
 	<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 nav_bar_custom">
+            <a href="index.html" target="blank"></a><!-- link logo with home page -->
+            <img src="image/logo.png" alt="logo" style="width: 300px; height: 50px;"> <!--image logo-->
+            <div>
+                <ul class="navbar-nav">
+                <li class="nav-item active"> <!-- active make highlight current item -->
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!-- dropdown menu, href = "#" means there is no link, only use activate dropdown menu -->
+                      About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- menu dropdown, aria-laballedby link this menu with navbarDropdown -->
+                      <a class="dropdown-item" href="indexgp2.html">What brings Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="Timothypg1.html">Examples of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="goal.html">Effects of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <div class="dropdown-divider"></div> <!-- This is a divider -->
+                      <a class="dropdown-item" href="Timothypg2.html">How to Overcome Poverty</a> <!-- This is a item in menu dropdơwn -->
+                    </div>
+                </li>
+                <li class="nav-item"> <!-- an item in a navbar -->
+                    <a class="nav-link" href="indexgp3.html">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
 	
 		<div class="container">
 		
 			<form onsubmit="return validate()">
 	
-				<div class="row">
-					<ul class="nav">
-				
-						<li class="nav-item">
-							<a class="nav-link active red" aria-current="page" href="#">Home</a>
-						</li>
-				  
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-				  
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-					
-					</ul>
-				</div>
 				
 				<br>
 	  
