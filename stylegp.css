@@ -1,0 +1,18 @@
+
+img{
+	width: 1200px;
+	height: 221px;
+}
+
+#nciPic img{
+	width:140px;
+	height:120px;
+}
+#nciPic p{
+	font-size:20px;
+	text-align: center;
+}
+#groupX p{
+	font-size:20px;
+	text-align: center;
+}
