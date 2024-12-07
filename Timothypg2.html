@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Group x website</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<script>
+		function validate(){
+			// fn & sn check that something has been submitted
+				// check for tel >0
+				// for any issues generate a msge - return that msge if req
+				// to check for the above set a flag to be true and then change to false if any form condition is not met
+					let valid = true; // our flag
+				//I used this code from Emer and manipulated it and applied to my webpage accordingly 
+				let msge ="Incomplete form: ";
+				//fn validation
+				if(document.getElementById("fn").value == ""){
+				msge+= "You need to fill firstname. "; 
+				valid = false; 
+				}
+				if(document.getElementById("sn").value == ""){
+				msge+= "You need to fill surname. ";
+				valid = false;
+				}
+				if(document.getElementById("tel").value == ""){
+				msge+= "Need to fill in phone number. "; 
+				valid = false; 
+				}
+				if(document.getElementById("email").value == ""){
+				msge+= "need to fill in email. ";
+				valid = false;
+				} else if(document.getElementById("email").value != ""){
+				inputE = document.getElementById("email").value;
+				let symbol = inputE.indexof("@"); 
+				if(symbol<1){
+				Valid =false;
+				msge+="not a valid email";
+				}
+				}
+				if(!valid){
+				document.getElementById("details").innerHTML=msge;
+				}
+				return valid;
+				}
+				function updateText(){
+				let name=document.getElementById("nameinp").value;
+				document.getElementById("name").innerHTML="Hello "+name;
+				}
+		</script>
+	</head>
+	<body>
+	<!--navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 nav_bar_custom">
+            <a href="index.html" target="blank"> <!-- link logo with home page -->
+            <img src="image/logo.png" alt="logo" style="width: 300px; height: 50px;"> <!--image logo-->
+            <div>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active"> <!-- make dropdown and active make highlight current item -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!-- dropdown menu, href = "#" means there is no link, only use activate dropdown menu -->
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- menu dropdown, aria-laballedby link this menu with navbarDropdown -->
+                      <a class="dropdown-item" href="#">What brings Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="page2.html">Examples of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="goal.html">Effects of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <div class="dropdown-divider"></div> <!-- This is a divider -->
+                      <a class="dropdown-item" href="example.html">How to Overcome Poverty</a> <!-- This is a item in menu dropdơwn -->
+                    </div>
+                </li>
+                <li class="nav-item"> <!-- an item in a navbar -->
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+		<section class="container mt-5 pt-3">
+	<div class="row">
+			
+				<img src="image/CHILD.jpg"alt="picture of child">
+				<br>
+				<p>This website is designed to inform people about the sustainability goal of poverty and ways to overcome poverty.
+				<br>
+				-One way of overcoming poverty is by creating jobs as this will be a source of income hence getting out of the poverty trap 
+				<br>
+				-People in poverty can be empowered by involving them in different programs that can increase their standards of living.
+				<br>
+				-people undergoing relative poverty can be given access to subsidised healthcare to ensure they don't get into absolute poverty.</p>
+	</div>
+	<p id="name"></p>
+		<label>Enter your name</label>
+		<br>
+		<input id="nameinp">
+		<br>
+		<button onclick="return updateText()">Click me</button>
+	<h1>Contact Details</h1>
+	<form onsubmit="return validate()">
+			firstname:<input type="text" id="fn"><br>
+			<br>
+			surname:<input type="text" id="sn"><br>
+			<br>
+			telephone:<input type="numeric"id="tel"><br>
+			<br>
+			email:<input type="text" id="email"><br>
+			<br>
+			<input type="submit" value= "submit form">
+			
+			<p id="details"></p>
+			</form>
+			<p>please fill in the following details accurately for us to get in touch with you and be part of our team to eradicate poverty </p>
+			<!--The code below will put the 4 images in a grid format as I manipulated bootstrap-->
+			<div class="container">
+				<div class="row image-grid">
+					<img src="image/poverty.jfif"alt="diagram of poverty map" class="col-md-6"> 
+					<img src="image/youngboy.jpg"alt="scotting boy"class="col-md-6">
+				</div>
+				<div class="row image-grid">
+					<img src="image/children.jpg"alt="children getting water">
+					<img src="image/child.jpg"alt="please help">
+				</div>
+			</div>
+			<section class="container mt-5 pt-3">
+	</body>
+	<br>
+	<footer>Timothy Andrew Semafumu(Editor)</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
