@@ -1,4 +1,4 @@
-/* Apply style to all elements on page -- Le Hoang Huynh editer --*/
+/* Apply style to all elements on page -- Le Hoang Huynh editor --*/
 *{
     margin: 0; /* Remove all default spacing outside*/
     padding: 0; /* Remove all default spacing inside*/
@@ -7,30 +7,47 @@
     font-optical-sizing: auto;
     font-style: normal; /* font mulish */
 }
-/* Apply font -- Le Hoang Huynh editer --*/
+/* Apply font -- Le Hoang Huynh editor --*/
 .mulish{ 
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
-/* background -- Le Hoang Huynh editer --*/
+/* background -- Le Hoang Huynh editor --*/
 body{
     background-color: rgb(255, 255, 255);
 
 }
-/* Le Hoang Huynh editer --*/
+/* Le Hoang Huynh editor --*/
 ul{
     list-style: none; /* remove the dot in front */
 }
 
-/* navbar Le Hoang Huynh editer --*/
+/* navbar Le Hoang Huynh editor --*/
 .nav_bar_custom{
     top: 0;
     z-index: 1000;
 }
 
-/* line on the goal page Le Hoang Huynh editer --*/
+/* line on the goal page Le Hoang Huynh editor --*/
 .line{
     width: 50px;
     height: 5px;
+}
+img{ /* Enrico editor --*/
+	width: 1200px;
+	height: 221px;
+}
+
+#nciPic img{ /* Enrico editor --*/
+	width:140px;
+	height:120px;
+}
+#nciPic p{ /* Enrico editor --*/
+	font-size:20px;
+	text-align: center;
+}
+#groupX p{ /* Enrico editor --*/
+	font-size:20px;
+	text-align: center;
 }
