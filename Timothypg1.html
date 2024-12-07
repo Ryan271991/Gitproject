@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Group x Website </title>
+	<!--The title tag makes the words Groupx website appear in the search bar of the webpage-->
+	<link href="style.css" rel="stylesheet">
+	<!--This links my stylesheet ith my style.css file-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="image/CHILD.jpg" alt="picture of a child" width="32" height="32">
+	<!--The onmouseover DOM I have used simply means when i hover my curser on the image it increases in size and when the curser is removed the image returns to its normal size-->
+	<script>
+		function bigImg(x) {
+		  x.style.height = "64px";
+		  x.style.width = "64px";
+	}
+		function normalImg(x) {
+		  x.style.height = "32px";
+		  x.style.width = "32px";
+	}
+	</script>
+  </head>
+  <body>
+  <!--I used my bootstrap knowledge from week 4 and manipul;ated it to get what I want for my website-->
+    <!--navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 nav_bar_custom">
+            <a href="index.html" target="blank"> <!-- link logo with home page -->
+            <img src="image/logo.png" alt="logo" style="width: 300px; height: 50px;"> <!--image logo-->
+            <div>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active"> <!-- make dropdown and active make highlight current item -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!-- dropdown menu, href = "#" means there is no link, only use activate dropdown menu -->
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- menu dropdown, aria-laballedby link this menu with navbarDropdown -->
+                      <a class="dropdown-item" href="#">What brings Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="page2.html">Examples of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="goal.html">Effects of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <div class="dropdown-divider"></div> <!-- This is a divider -->
+                      <a class="dropdown-item" href="example.html">How to Overcome Poverty</a> <!-- This is a item in menu dropdơwn -->
+                    </div>
+                </li>
+                <li class="nav-item"> <!-- an item in a navbar -->
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+	<section class="container mt-5 pt-3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="image/CHILD.jpg"alt="picture of a child">
+				<!--An img src tag is used to display images on the webpage-->
+			</div>
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-3">
+				<h1>POVERTY </h1>
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p>On this web page we shall look at the two main types of poverty these are Absolute poverty and Relative poverty.
+				<br>
+				-Absolute poverty is when a person can't even afford the basic needs such as food or shelter and many others this is the worst type of poverty as a person can't survive 
+				<br>
+				-Relative poverty is simply the type of poverty where a person's average income is relatively lower than the rest of the general population 
+				<br>
+				This isn't the worst type of poverty as a person can afford the essential basic needs but just has a lower standards of living compared to the rest of the population.</p>
+				
+			</div> 
+			<div class="col-md-6">
+				<img src="image/image.jpg" alt="picture of a poverty trap">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<img src="image/health-care.jpg"alt="picture to show free health care">
+			</div>
+			<br>
+			<div class="col-md-6">
+				<p> Under the different types of poverty we have so many examples of poverty such as;
+				<br>
+				-The luck of shelter
+				<br>
+				-Hunger
+				<br>
+				-Being sick and not being able to see a doctor 
+				<br>
+				-Lack of access to clean and safe water for both drinking and otrher activities 
+				<br>
+				The page has diagrams to show safe water and access to healthcare 
+				<br>
+				The webpage also has a diagram to ilustrate a poverty trap which all leads to low incomes</p>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			</div> 
+			<div class="col-md-6">
+				<img src="image/water.jpg" alt="picture of safe water">
+			</div>
+		</div>
+		</div>	
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <br>
+  <footer>Timothy Andrew Semafumu (Editor)</footer>
+</html>
