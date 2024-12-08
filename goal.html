@@ -44,12 +44,6 @@
                 }
             }
 
-            //address validation
-            if(document.getElementById("address").value == ""){
-                msge+= "You need to fill in the address. "; //build msge
-                valid = false; //flag is false
-            }
-
             //phone validation
             if(document.getElementById("phone").value == ""){
                 msge+= "Need to fill in phone number. "; //build msge
@@ -171,17 +165,18 @@
                     <li><b>$250: Supplies water for 40 children for a month</b></li>
                     <li><b>$300: Covers medical Supplies for 20 children</b></li>
                 <ul>
-            <h4>Your help can make a difference. If you are undecided, remember any contribution helps.</h4> <!-- Heading H3 -->
+            <h4>Your help can make a difference. If you are undecided, remember any contribution helps.</h4> <!-- Heading H4 -->
+            <p>Note: Asterisk (*) is mandatory.</p>
             <form onsubmit="showMessage()"> <!--calls the showMessage () function -->
-                Full name: <br>
+                Full name*: <br>
                 <input type="text" id="name" style="width: 100%"><br> <!-- input Full name -->
-                Email: <br>
+                Email*: <br>
                 <input type="email" id="mail" style="width: 100%"><br> <!-- input mail -->
                 Address: <br>
                 <input type="text" id="address" style="width: 100%"><br> <!-- input address -->
-                Telephone: <br>
+                Telephone*: <br>
                 <input type="number" id="phone" style="width: 100%"><br> <!-- input telephone -->
-                Enter the amount of money you want to donate: <br>
+                Enter the amount of money you want to donate*: <br>
                 <input type="number" id="donate" placeholder="Euro" style="width: 100%"><br> <!-- input donate -->
                 <br>
                 <input type="submit" value="Submit form"> <!-- submit form -->
