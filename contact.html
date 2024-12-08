@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script>
+        function validate(){
+
+            // Full name check that something has been submitted
+            // check for phone >0
+            // email check for the @ sumbol
+            // for any issues generate a msge - return that msge if req
+            // to check for the above set a flag to be true and then change to false if any form condition is not met
+            let valid = true; // our flag
+            let msge ="Incomplete form: ";
+
+    
+            //Full name validation
+            if(document.getElementById("name").value == ""){
+                msge+= "You need to full name. "; //build msge
+                valid = false; //flag is false
+            }
+
+
+            //valid email
+            if(document.getElementById("mail").value == ""){
+                msge+= "Need to fill in email. ";
+                valid = false;
+            } else if(document.getElementById("mail").value != ""){
+                inputE =document.getElementById("mail").value;
+                let symbol = inputE.indexOf("@"); //will return the index
+                if (symbol <1 ){
+                    valid = false;
+                    msge+= "not a valid email";
+                }
+            }
+
+            //address validation
+            if(document.getElementById("address").value == ""){
+                msge+= "You need to address. "; //build msge
+                valid = false; //flag is false
+            }
+
+            //phone validation
+            if(document.getElementById("phone").value == 0){
+                msge+= "Need to fill in phone number. "; //build msge
+                valid = false; //flag is false
+            }
+
+            //validate radio
+            if(document.getElementById("Ryan").checked == false && document.getElementById("Timothy").checked == false && document.getElementById("Enrico Frossard").checked == false){
+                msge+="you must check a specialist ";
+                valid = false;
+            }
+
+            // show the msge only if valid == false
+            if(!valid){ //!valid means " not true"
+            document.getElementById("details").innerHTML = msge;
+            }
+            return valid;
+        }
+    </script>
+</head>
+<body>
+ <!-- create navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 nav_bar_custom">
+            <a href="index.html" target="blank"></a><!-- link logo with home page -->
+            <img src="image/logo.jpeg" alt="logo" style="width: 300px; height: 50px;"> <!--image logo-->
+            <div>
+                <ul class="navbar-nav">
+                <li class="nav-item active"> <!-- active make highlight current item -->
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!-- dropdown menu, href = "#" means there is no link, only use activate dropdown menu -->
+                      About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- menu dropdown, aria-laballedby link this menu with navbarDropdown -->
+                      <a class="dropdown-item" href="whatBringsPoverty.html">What brings Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="Timothypg1.html">Examples of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <a class="dropdown-item" href="goal.html">Effects of Poverty</a> <!-- This is a item in menu dropdơwn -->
+                      <div class="dropdown-divider"></div> <!-- This is a divider -->
+                      <a class="dropdown-item" href="Timothypg2.html">How to Overcome Poverty</a> <!-- This is a item in menu dropdơwn -->
+                    </div>
+                </li>
+                <li class="nav-item"> <!-- an item in a navbar -->
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+    <!-- Information -->
+    <section class="container mt-5 pt-5">
+        <div class="row align-items-start justify-content-center">
+            <div class="row col-12 col-xl-4 col-md-4 align-items-center">
+                <img class="col-4 col-xl-12 col-md-12 w-100" src="image/nci.jpeg" alt="NCI Building">
+                <div class="col-8 col-xl-12 col-md-12 mt-4">
+                    <br>
+                    <h3>RESEARCH CENTER</h3>
+                    <p><strong>National College of Ireland</strong></p>
+                    <p>📍 <strong>Mayor Street Lower, International Financial Services Centre, Dublin 1</strong></p>
+                    <p>📞 <strong>01 4498 500 </strong></p>
+                    <p>📠 <strong>01 4972 200 </strong></p>
+                    <p>📧 <strong>info@ncirl.ie</strong></p>
+                </div>
+            </div>
+
+            <!-- form contact -->
+            <div class="w-100 col-12 col-xl-8 col-md-8 mt-5">
+                <h2>CONTACT US</h2>
+                <p>For any inquiries or support requests, please leave your information here. We will review and respond as soon as possible.</p>
+                <form onsubmit="return validate()">
+                Full name: <br>
+                <input type="text" id="name"><br>
+                Email: <br>
+                <input type="email" id="mail"><br>
+                Address: <br>
+                <input type="text" id="address"><br>
+                Telephone: <br>
+                <input type="number" id="phone"><br>
+                Content: <br>
+                <input type="text" id="content"><br>
+                <p>Please select the specialist you would like to contact</p>
+                <input type="radio" name="specialist" id="Ryan" value="Ryan"> Ryan <br>
+                <input type="radio" name="specialist" id="Timothy" value="Timothy"> Timothy <br>
+                <input type="radio" name="specialist" id="Enrico Frossard" value="Enrico Frossard"> Enrico Frossard <br>
+                <br>
+                <input type="submit" value="Submit form">
+            </form>
+            <p id="details"></p>
+        </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
