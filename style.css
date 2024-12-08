@@ -18,7 +18,12 @@ body{
     background-color: rgb(255, 255, 255);
 
 }
-/* Enrico editor --*/
+/* line on the goal page Le Hoang Huynh editor --*/
+.line{
+    width: 50px;
+    height: 5px;
+}
+/* Timothy editor --*/
 ul{
     list-style: none; /* remove the dot in front */
 }
@@ -29,8 +34,26 @@ ul{
     z-index: 1000;
 }
 
-/* line on the goal page Le Hoang Huynh editor --*/
-.line{
-    width: 50px;
-    height: 5px;
+#pict1 { /* Enrico editor --*/
+    width: 190px;
+    height: 150px;
+}
+
+#pict2 { /* Enrico editor --*/
+    width: 190px;
+    height: 150px;
+}
+
+#pict3 { /* Enrico editor --*/
+    width: 190px;
+    height: 150px;
+}
+
+#pict4 { /* Enrico editor --*/
+    width: 190px;
+    height: 150px;
+}
+#pict5{ /* Enrico editor --*/
+	height: 300px;
+	width: auto;
 }
